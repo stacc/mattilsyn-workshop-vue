@@ -1,6 +1,7 @@
 {
   "name": "mattilsyn-workshop-vue",
   "version": "0.1.0",
+  "description": "A code example using  the open API from Mattilsynet",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

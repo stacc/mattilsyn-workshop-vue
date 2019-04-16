@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MatTilsyn title="BraMat – Appen du treng når du skal ut å ete"/>
+    <listText/>
+    <SmileyTabell/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MatTilsyn from './components/MatTilsyn.vue'
+import SmileyTabell from './components/SmileyTabell.vue'
+import ListText from './components/ListText.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MatTilsyn,
+    SmileyTabell,
+    ListText
   }
 }
 </script>
