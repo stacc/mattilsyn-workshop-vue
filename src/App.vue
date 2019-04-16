@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <MatTilsyn title="BraMat – Appen du treng når du skal ut å ete"/>
     <listText/>
     <SmileyTabell/>
+    <img class="logoStacc" src="./assets/stacc_logo_bright-bg.png" alt="Stacc">
   </div>
 </template>
 
@@ -30,5 +30,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.logoStacc {
+  margin: 50px;
 }
 </style>
