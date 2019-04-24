@@ -1,7 +1,7 @@
 <template>
   <section class="table">
-    <button :class="{ active: isActive('Bergen') }" v-on:click="getPlaceByPostalCode('Bergen')">Bergen</button>
-    <button :class="{ active: isActive('Oslo') }" v-on:click="getPlaceByPostalCode('Oslo')">Oslo</button>
+    <button :class="{ active: isActive('Bergen') }" v-on:click="getPlaceByPostalPlace('Bergen')">Bergen</button>
+    <button :class="{ active: isActive('Oslo') }" v-on:click="getPlaceByPostalPlace('Oslo')">Oslo</button>
    
     <section v-if="hasData">
         <input type="text" id="myInput" v-on:keyup="filterTable()" placeholder="Søk etter restaurant..">
@@ -20,10 +20,10 @@
             <td>{{ place.dato }}</td>
             
             <td>
-                <div v-if="place.total_karakter == 0"><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 1"><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 2"><img class="gradeFace" src="../assets/strek_fjes.svg" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 3"><img class="gradeFace" src="../assets/surt_fjes.svg" alt="stort smil" width="30"/></div>
+                <div v-if="place.total_karakter == 0"><img class="gradeFace" id="bigSmile" src="../assets/stort_smil.svg" alt=":D" width="30"/></div>
+                <div v-if="place.total_karakter == 1"><img class="gradeFace" id="bigSmile" src="../assets/stort_smil.svg" alt=":D" width="30"/></div>
+                <div v-if="place.total_karakter == 2"><img class="gradeFace" id="lineFace" src="../assets/strek_fjes.svg" alt=":|" width="30"/></div>
+                <div v-if="place.total_karakter == 3"><img class="gradeFace" id="unhappyFace" src="../assets/surt_fjes.svg" alt=":(" width="30"/></div>
 
             </td>
             <td>{{ place.karakter1 }}</td>
@@ -53,13 +53,15 @@ export default {
       }
   },
   methods: {
-      getPlaceByPostalCode(postalCode) {
-          axios ({ method: 'GET', url: 'https://hotell.difi.no/api/json/mattilsynet/smilefjes/tilsyn?poststed=' + postalCode }).then(resturant => {
-               this.activeItem = postalCode;
+      getPlaceByPostalPlace(postalPlace) {
+          axios ({ method: 'GET', url: 'https://hotell.difi.no/api/json/mattilsynet/smilefjes/tilsyn?poststed=' + postalPlace }).then(resturant => {
+               this.activeItem = postalPlace;
                this.hasData = true;
                this.places = '';
                this.places = resturant.data.entries;
+               this.places.reverse();
           }, error => {
+              // eslint-disable-next-line
               console.log("Noko gjekk gale", error);
           })
       },
@@ -129,7 +131,7 @@ button:active, button:visited, {
     outline: none;
     border: none;
 }
-
+/*Emoticons for the grade for each restaurant*/
 .gradeFace {
     vertical-align: middle;
 }

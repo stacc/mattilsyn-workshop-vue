@@ -3,10 +3,10 @@
     <h2>Karakterskala</h2>
     <section class="list">
       <ul>
-        <li><img class="gradeFace" src="../assets/stort_smil.png" alt="stort smil" width="30"/> 0 = Ingen brudd på regelverket funnet.</li>
-        <li><img class="gradeFace" src="../assets/stort_smil.png" alt="stort smil" width="30"/> 1 = Mindre brudd på regelverket som ikke krever oppfølging.</li>
-        <li><img class="gradeFace" src="../assets/strek_fjes.png" alt="strekfjes" width="30"/> 2 = Brudd på regelverket som krever oppfølging.</li>
-        <li><img class="gradeFace" src="../assets/surt_fjes.png" alt="surt fjes" width="30"/> 3 = Alvorlig brudd på regelverket.</li>
+        <li><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/> 0 = Ingen brudd på regelverket funnet.</li>
+        <li><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/> 1 = Mindre brudd på regelverket som ikke krever oppfølging.</li>
+        <li><img class="gradeFace" src="../assets/strek_fjes.svg" alt="strekfjes" width="30"/> 2 = Brudd på regelverket som krever oppfølging.</li>
+        <li><img class="gradeFace" src="../assets/surt_fjes.svg" alt="surt fjes" width="30"/> 3 = Alvorlig brudd på regelverket.</li>
       </ul>
       </section>
   </div>
