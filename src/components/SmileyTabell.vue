@@ -59,7 +59,6 @@ export default {
                this.hasData = true;
                this.places = '';
                this.places = resturant.data.entries;
-               this.places.reverse();
           }, error => {
               // eslint-disable-next-line
               console.log("Noko gjekk gale", error);
@@ -71,11 +70,11 @@ export default {
           this.hasData = false;
       },
       filterTable(){
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
 
             for (i = 0; i < tr.length; i++) {
                 td = tr[i].getElementsByTagName("td")[0];
@@ -87,7 +86,9 @@ export default {
                     tr[i].style.display = "none";
                 }
                 } 
-            }
+            
+        }
+        
        },
         isActive (menuItem) {
             return this.activeItem === menuItem;
