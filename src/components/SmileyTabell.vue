@@ -20,10 +20,10 @@
             <td>{{ place.dato }}</td>
             
             <td>
-                <div v-if="place.total_karakter == 0"><img class="gradeFace" src="../assets/stort_smil.png" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 1"><img class="gradeFace" src="../assets/stort_smil.png" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 2"><img class="gradeFace" src="../assets/strek_fjes.png" alt="stort smil" width="30"/></div>
-                <div v-if="place.total_karakter == 3"><img class="gradeFace" src="../assets/surt_fjes.png" alt="stort smil" width="30"/></div>
+                <div v-if="place.total_karakter == 0"><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/></div>
+                <div v-if="place.total_karakter == 1"><img class="gradeFace" src="../assets/stort_smil.svg" alt="stort smil" width="30"/></div>
+                <div v-if="place.total_karakter == 2"><img class="gradeFace" src="../assets/strek_fjes.svg" alt="stort smil" width="30"/></div>
+                <div v-if="place.total_karakter == 3"><img class="gradeFace" src="../assets/surt_fjes.svg" alt="stort smil" width="30"/></div>
 
             </td>
             <td>{{ place.karakter1 }}</td>
